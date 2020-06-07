@@ -1,0 +1,16 @@
+[Unit]
+Description=UDP time
+
+[Service]
+ExecStart=/usr/bin/python3 /opt/python-udptime/udptimed.py
+PIDFile=/var/run/udptimed.pid
+Restart=always
+User=root
+Group=root
+PermissionsStartOnly=false
+PrivateTmp=no
+StandardOutput=null
+StandardError=null
+
+[Install]
+WantedBy=multi-user.target
